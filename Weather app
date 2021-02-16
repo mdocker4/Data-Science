@@ -12,7 +12,8 @@ library(readr)
 #Read Data#
 ###########
 
-weather<- read_csv("~/R studio Working Directory/App1/weather-weka.csv")
+weather<- read.csv("https://raw.githubusercontent.com/mdocker4/data-for-code/main/weather-weka.csv"
+                    , stringsAsFactors = T )
 View(weather)
 weather[,'outlook']<- as.factor(weather$outlook)
 weather[,'play']<- as.factor(weather$play)
